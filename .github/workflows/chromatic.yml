@@ -28,5 +28,3 @@ jobs:
       # build storybook
       - name: build storybook
         run: yarn run build-storybook
-      - name: publish storybook to S3 bucket
-        run: yarn run deploy-storybook
