@@ -14,7 +14,7 @@
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "test": "jest ./tests",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -s public",
+    "build-storybook": "build-storybook -s ./public",
     "deploy-storybook": "storybook-to-aws-s3 --bucket-path=storybook-elysium/" 
   },
   "eslintConfig": {
