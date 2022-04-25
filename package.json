@@ -15,7 +15,7 @@
     "test": "jest ./tests",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-aws-s3 --bucket-path=storybook-elysium" 
+    "deploy-storybook": "storybook-to-aws-s3 --bucket-path=storybook-elysium/" 
   },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
