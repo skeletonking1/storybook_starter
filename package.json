@@ -14,8 +14,8 @@
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "test": "jest ./tests",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -s public",
-    "deploy-storybook": "storybook-to-aws-s3 --bucket-path=storybook-elysium/ --aws-profile=NONE" 
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-aws-s3 --bucket-path=storybook-elysium/ --aws-profile=NONE"
   },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
@@ -40,6 +40,7 @@
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",
     "@storybook/preact": "^6.3.12",
+    "@storybook/react": "^6.4.22",
     "@types/enzyme": "^3.10.5",
     "@types/jest": "^26.0.8",
     "@typescript-eslint/eslint-plugin": "^2.25.0",
