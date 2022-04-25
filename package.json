@@ -41,6 +41,7 @@
     "@storybook/addon-links": "^6.3.12",
     "@storybook/preact": "^6.3.12",
     "@storybook/react": "^6.4.22",
+    "@storybook/storybook-deployer": "^2.8.11",
     "@types/enzyme": "^3.10.5",
     "@types/jest": "^26.0.8",
     "@typescript-eslint/eslint-plugin": "^2.25.0",
