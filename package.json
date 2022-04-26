@@ -15,7 +15,7 @@
     "test": "jest ./tests",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-aws-s3 --ci --bucket-path=storybook-elysium/ --s3-sync-options='--delete'"
+    "deploy-storybook": "node ./utils/deploy-command.js"
   },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
@@ -28,6 +28,7 @@
     ]
   },
   "dependencies": {
+    "folder-hash": "^4.0.2",
     "husky": "^7.0.4",
     "preact": "^10.3.1",
     "preact-render-to-string": "^5.1.4",

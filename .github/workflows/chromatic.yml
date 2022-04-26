@@ -31,9 +31,7 @@ jobs:
           aws-region: us-east-1
       - name: Install dependencies
         run: yarn
-      # build storybook
-      - name: build storybook
-        run: yarn run build-storybook
-      # publish to AWS S3 bucket
-      - name: publish to S3 bucket
+      # build and hash folder, deploy storybook
+      - name: build storybook and publish to S3 bucket
+        uses: at-wat/setup-gh-pr-comment@v0
         run: yarn run deploy-storybook
