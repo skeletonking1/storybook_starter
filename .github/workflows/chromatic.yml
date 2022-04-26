@@ -24,7 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Install dependencies
-        run: yarn
+        run: yarn install
       # build and hash folder, deploy storybook
       - name: build storybook and publish to S3 bucket
         run: yarn run deploy-storybook
