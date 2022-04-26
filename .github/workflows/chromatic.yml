@@ -33,5 +33,4 @@ jobs:
         run: yarn
       # build and hash folder, deploy storybook
       - name: build storybook and publish to S3 bucket
-        uses: at-wat/setup-gh-pr-comment@v0
         run: yarn run deploy-storybook
