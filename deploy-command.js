@@ -5,15 +5,14 @@ hashAndDeploy()
 async function hashAndDeploy(){
   await runCommand("npm run build");
   const folderHash = await hashPromise();
-  console.log('folderhash',folderHash);
-  await runCommand(`storybook-to-aws-s3 --ci --bucket-path=storybook-elysium/${folderHash}`)
-  await runCommand(`gh-pr-comment "Storybook Deployment" "https://s3-url-for-the-deploy/${folderHash}"`)
+  await runCommand(`storybook-to-aws-s3 --ci --bucket-path=storybook-elysium/${folderHash.hash}`)
+  await runCommand(`gh-pr-comment "Storybook Deployment" "https://s3-url-for-the-deploy/${folderHash.hash}"`)
 }
 
 async function hashPromise(){
   const options = { folders: { include: ['storybook-static'] } };
   return new Promise((res,rej)=>{
-    hashElement('../', options)
+    hashElement(__dirname, options)
     .then(hash => {
       const bucketName = hash.toString()
       console.log('bucketName',bucketName);
