@@ -27,7 +27,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: arn:aws:iam::712626623964:role/my-github-actions-role
+          role-to-assume: arn:aws:iam::712626623964:role/github-actions-role
           aws-region: us-east-1
       - name: Install dependencies
         run: yarn install
