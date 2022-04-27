@@ -14,6 +14,7 @@ on:
   workflow_dispatch:
 permissions:
   id-token: write
+  contents: read
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -30,7 +31,6 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::712626623964:role/github-actions-role
           aws-region: us-east-1
-          role-session-name: GithubActionsSession
       - name: Install dependencies
         run: yarn install
       # build and hash folder, deploy storybook
