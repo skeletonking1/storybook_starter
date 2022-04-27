@@ -30,6 +30,7 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::712626623964:role/github-actions-role
           aws-region: us-east-1
+          role-session-name: GithubActionsSession
       - name: Install dependencies
         run: yarn install
       # build and hash folder, deploy storybook
